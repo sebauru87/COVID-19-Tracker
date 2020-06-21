@@ -19,8 +19,9 @@ const showInfo = () =>{
                                                 <img src=${country.countryInfo.flag}>
                                                 ${country.country}
                                             </td>
-                                            <td>${country.cases}</td>
-                                            <td>${country.active}</td>
+                                            <td>${country.cases.toLocaleString()}</td>
+                                            <td>${country.active.toLocaleString()}</td>
+                                            <td>${country.recovered.toLocaleString()}</td>
                                         </tr>`);
     })
 }
@@ -48,6 +49,15 @@ const orderByActiveCases=()=>{
     countries.sort(function(a, b){
         let a1 = a.active;
         let b1 = b.active;
+        if(a1==b1) return 0;
+        return a1>b1?1:-1;
+    })
+    showInfo();
+}
+const orderByRecovered=()=>{
+    countries.sort(function(a, b){
+        let a1 = a.recovered;
+        let b1 = b.recovered;
         if(a1==b1) return 0;
         return a1>b1?1:-1;
     })

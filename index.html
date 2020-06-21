@@ -14,8 +14,11 @@
 </head>
 
 <body>
-    <h1>COVID 19 Tracker</h1>
-    <div>
+    <div class="jumbotron">
+        <h1>COVID 19 Tracker</h1>
+    </div>
+    
+    <div class="container">
         <table id="covidTable" class="table table-hover table-sm">
             <thead>
               <tr>
@@ -23,6 +26,7 @@
                 <th scope="col"><a href="#" onclick="orderByName()">Country</a></th>
                 <th scope="col"><a href="#" onclick="orderMaxTotalCases()">Total Cases</a></th>
                 <th scope="col"><a href="#" onclick="orderByActiveCases()">Active Cases</a></th>
+                <th scope="col"><a href="#" onclick="orderByRecovered()">Recovered</a></th>
               </tr>
             </thead>
             <tbody>
