@@ -1,5 +1,4 @@
-My personal COVID 19 Tracker
-API from https://corona.lmao.ninja/v2/countries?sort=country
+My personal COVID 19 Tracker API
 
 You can order table by: Name - Total cases - Active cases
 
